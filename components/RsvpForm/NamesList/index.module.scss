@@ -1,0 +1,40 @@
+
+.button {
+  margin-top: 10px;
+  font-size: 15px;
+  padding: 15px;
+  background: #edf2f4;
+  border: none;
+  color: #2C4F32;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background: #2C4F32;
+    color: white;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: auto;
+  }
+}
+
+
+.optionsWrapper {
+  padding-top: 50px;
+}
+
+.optionWrapper {
+  margin-bottom: 17px;
+
+  label {
+    padding-left: 7px;
+    font-family: 'Cormorant Infant', serif;
+  }
+
+  input {
+    margin: 0;
+  }
+}

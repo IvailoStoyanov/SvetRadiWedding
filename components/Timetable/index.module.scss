@@ -1,0 +1,70 @@
+@import '../../styles/variables.scss';
+
+.timetableWrapper {
+    @media (min-width: $media-s-tablet) {
+        margin: 90px 0 50px 0;
+    }
+}
+
+.sectionTitle {
+    margin: 0 0 20px 0;
+    text-align: center;
+    text-transform: lowercase;
+
+    @media (min-width: $media-s-tablet) {
+        margin: 0 0 40px 0;
+    }
+}
+
+.list {
+    list-style: none;
+    padding: 0 30px;
+    margin: 0;
+
+    @media (min-width: $media-s-tablet) {
+        display: flex;
+        justify-content: center;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+
+        @media (min-width: $media-s-tablet) {
+            flex-flow: column;
+            align-items: baseline;
+            padding-left: 40px;
+            width: 150px;
+
+            p {
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+.icon {
+    width: 80px;
+    margin-right: 15px;
+
+    @media (min-width: $media-s-tablet) {
+        margin: 0 0 15px 0;
+    }
+}
+
+.time {
+    margin: 0 20px 0 0;
+
+    @media (min-width: $media-s-tablet) {
+        margin: 0 0 10px 0;
+    }
+}
+
+.timestampInfo {
+    width: 100%;
+
+    @media (min-width: $media-s-tablet) {
+        margin: 0;
+        line-height: 23px;
+    }
+}
