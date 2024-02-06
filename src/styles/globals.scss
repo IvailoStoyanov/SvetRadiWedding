@@ -1,0 +1,97 @@
+@import '/src/styles/variables.scss';
+
+@font-face {
+  font-family: 'Cormorant Infant';
+  src: url('../fonts/cormorant-infant/CormorantInfant-Bold.ttf');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Rawline';
+  src: url('../fonts/rawline-cufonfonts/rawline-700.ttf');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Rawline';
+  src: url('../fonts/rawline-cufonfonts/rawline-500.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0px;
+  margin: 0;
+  font-family: Rawline, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 18px;
+  color: #2C4F32;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+input {
+  font-family: 'Cormorant Infant', serif;
+}
+
+h2 {
+  font-size: 45px;
+  line-height: 40px;
+  
+  @media (min-width:$media-s-tablet) {
+    font-size: 55px;
+  }
+}
+
+h3 {
+  font-size: 30px;
+}
+
+input, label {
+  font-size: 20px;
+}
+
+p {
+  line-height: 28px;
+}
+
+a {
+  font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.formSuccessWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  .textWrapper {
+    text-align: center;
+    max-width: 600px;
+    margin: auto 0;
+    padding: 0 30px;
+
+    h1 {
+      font-size: 50px;
+      margin: 0;
+    }
+  }
+
+    height: 100vh;
+    background: url(../public/branches/desktop/header-without-text.svg) center no-repeat;
+    background-size: cover;
+
+}
