@@ -8,8 +8,7 @@ import { GuestsContext } from '../../../contexts/GuestsContext';
 import { updateGuestGroup } from '../../../api/guests';
 import user from '../../../assets/user.svg';
 import group from '../../../assets/group.svg';
-
-// import { useRouter } from 'next/router'
+import { useNavigate } from 'react-router-dom';
 
 const SelectedGuest = () => {
   const context = useContext(GuestsContext);
@@ -22,11 +21,11 @@ const SelectedGuest = () => {
     guestsGroupContext,
   } = context;
 
-  // const router = useRouter();
+  const navigate = useNavigate();
 
   const handleSubmit = () => {
-    updateGuestGroup(guestsGroupContext)
-    // .then(() => router.push('formSuccess'));
+    updateGuestGroup(guestsGroupContext);
+    navigate('/formSuccess');
   }
 
   return (
