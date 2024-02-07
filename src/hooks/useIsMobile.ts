@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { useWindowSize } from "./useWindowSize";
-// import { IsSsrMobileContext } from "../contexts/IsMobileContext"
 import { IsSsrMobileContext } from "./../contexts/IsMobileContext";
 
 export const useIsMobile = () => {
