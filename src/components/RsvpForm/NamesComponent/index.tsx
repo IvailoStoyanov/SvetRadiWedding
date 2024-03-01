@@ -27,9 +27,9 @@ const NamesComponent = () => {
       getGuestMatch(name, setGuestsMatchContext, setIsFetching);
     }
   }
-
-  const handleFindInvitation = (name: string ) => {
-    getGuestMatch(name, setGuestsMatchContext, setIsFetching)
+  
+  const handleFindInvitation = () => {
+    getGuestMatch(name, setGuestsMatchContext, setIsFetching);
   }
 
   return (
@@ -37,12 +37,19 @@ const NamesComponent = () => {
       <div className={styles.inputsWrapper}>
         <div className={styles.nameInputWrapper}>
           <label htmlFor="firstName">Вашето име:</label>
-          <input type="text" id="firstName" name="name" onChange={handleNameInput} onKeyDown={handleNameSubmit} value={name} />
+          <input
+            type="text"
+            id="firstName"
+            name="name"
+            onChange={handleNameInput}
+            onKeyDown={handleNameSubmit}
+            value={name}
+          />
         </div>
       </div>
       <button
         className={styles.button}
-        onClick={() => handleFindInvitation(name)}
+        onClick={() => handleFindInvitation()}
         type="button"
         disabled={name.length < 3}
       >
