@@ -1,11 +1,13 @@
 import styles from './Header.module.scss';
-import radiSvet from '../../assets/radiSvet.png';
+import inviteMobile from '../../assets/headers/headerMobile.svg';
+import inviteDesktop from '../../assets/headers/headerDesktop.svg';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 export default function Header({ title }: { title: string }) {
   return <header className={styles.header}>
     <div className={styles.headerWrapper}>
       <h1 className={styles.title}>{title}</h1>
-      <img src={radiSvet} alt="Tree branch" style={{ display: "block", margin: "0 auto" }} />
+      <img className={styles.image} src={useIsMobile() ? inviteMobile : inviteDesktop} alt="Invitation" />
     </div>
   </header>
 }
