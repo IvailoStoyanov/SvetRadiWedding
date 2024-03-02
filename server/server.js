@@ -5,7 +5,7 @@ const app = express();
 const guestRoutes = require('./routes/guests');
 
 const corsOptions = {
-    origin: process.env.PRODUCTION === "production" ? "svatbasveiradi.com" : "*",
+    origin: process.env.PRODUCTION === "production" ? "https://svatbasveiradi.com" : "*",
     optionsSuccessStatus: 200
 }
 
