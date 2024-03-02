@@ -37,9 +37,6 @@ const Affirmation = () => {
     setGuestsGroupContext(modifiedGuests);
   }
 
-  console.log('Update?', guestsGroupContext);
-  
-
   return (
     <ul className={styles.list}>
       {guestsGroupContext.map((guest, i) => {

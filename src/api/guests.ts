@@ -50,8 +50,6 @@ export async function updateGuestGroup(updatedData: RecordType[]) {
         })
     }
 
-    console.log(structuredData);
-
     try {
         const response = await axios.patch('http://localhost:3000/api/guests/update', structuredData, {
             headers: {
