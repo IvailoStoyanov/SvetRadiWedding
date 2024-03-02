@@ -1,5 +1,3 @@
-
-import './App.css'
 import FormSuccess from "./pages/formSuccess";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";

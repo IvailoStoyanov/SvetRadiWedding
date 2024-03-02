@@ -1,12 +1,13 @@
 @import '/src/styles/variables.scss';
 
 .formWrapper {
+  margin: 50px 25px 150px 25px;
   padding: 20px 30px;
+  background: white;
+  overflow: hidden;
 
   h2 {
     text-align: center;
-    text-transform: lowercase;
-    margin: 50px 0 0 0;
   }
 
   p {
@@ -17,5 +18,12 @@
 
   @media (min-width:$media-s-tablet) {
     text-align: center;
+    max-width: calc(600px - 60px);
+    margin: 60px auto 250px auto;
+  }
+  
+  @media (min-width:$media-s-desktop) {
+    max-width: calc(1000px - 60px);
+
   }
 }

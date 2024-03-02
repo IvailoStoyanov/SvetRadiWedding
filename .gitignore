@@ -9,7 +9,7 @@
 /coverage
 
 # Vite.js
-dist
+dist/
 
 # production
 /build

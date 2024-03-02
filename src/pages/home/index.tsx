@@ -1,5 +1,4 @@
 import DetailsSection from "../../components/DetailsSection";
-import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import RsvpForm from "../../components/RsvpForm";
 import Timetable from "../../components/Timetable";
@@ -14,7 +13,6 @@ export default function Home() {
             <GuestsProvider>
                 <RsvpForm />
             </GuestsProvider>
-            <Footer />
         </>
     )
 }

@@ -1,12 +1,18 @@
 @import '/src/styles/variables.scss';
 
 .wrapper {
+  margin: 50px 25px 150px 25px;
   padding: 20px 30px;
+  background: white;
 
   @media (min-width:$media-s-tablet) {
-    max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 150px auto;
+    max-width: calc(600px - 60px);
     text-align: center;
+  }
+  
+  @media (min-width:$media-s-desktop) {
+    max-width: calc(1000px - 60px);
   }
 }
 
@@ -30,7 +36,7 @@
   padding: 15px;
   background: #edf2f4;
   border: none;
-  color: #2C4F32;
+  color: #298c53;
   cursor: pointer;
   border-radius: 2px;
   transition: 0.2s ease-in-out;

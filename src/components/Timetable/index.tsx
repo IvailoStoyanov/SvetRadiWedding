@@ -13,28 +13,38 @@ const Timetable = () => {
       <ul className={styles.list}>
         <li>
           <img src={house} alt="настаняване" className={styles.icon} />
-          <p className={styles.time}>16:30</p>
-          <p className={styles.timestampInfo}>Добре дошли в Пасарел Лейк Клуб</p>
+          <p className={styles.time}>14:00</p>
+          <p >Настаняване</p>
         </li>
         <li>
           <img src={ring} alt="пръстени" className={styles.icon} />
           <p className={styles.time}>17:00</p>
-          <p className={styles.timestampInfo}>Граждански ритуал</p>
+          <p >Ритуал на плажа</p>
         </li>
         <li>
           <img src={cocktail} alt="коктейли" className={styles.icon} />
           <p className={styles.time}>17:30</p>
-          <p className={styles.timestampInfo}>Коктейл и снимки</p>
+          <p >Коктейл и снимки с гостите</p>
+        </li>
+        <li>
+          <img src={cocktail} alt="коктейли" className={styles.icon} />
+          <p className={styles.time}>18:30</p>
+          <p >Добре дошли в бара на къмпинга</p>
         </li>
         <li>
           <img src={diner} alt="вечеря" className={styles.icon} />
           <p className={styles.time}>19:00</p>
-          <p className={styles.timestampInfo}>Вечеря</p>
+          <p >Вечеря</p>
+        </li>
+        <li>
+          <img src={diner} alt="вечеря" className={styles.icon} />
+          <p className={styles.time}>22:00</p>
+          <p >Торта</p>
         </li>
         <li>
           <img src={party} alt="парти" className={styles.icon} />
           <p className={styles.time}>22:00</p>
-          <p className={styles.timestampInfo}>Парти</p>
+          <p >Парти</p>
         </li>
       </ul>
     </div>
