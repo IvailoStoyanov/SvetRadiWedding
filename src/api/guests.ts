@@ -3,7 +3,7 @@ import { RecordType } from "../Types/types";
 import axios from 'axios';
 import { statusHelper } from '../utils/statusHelper';
 
-const baseURL = process.env.PRODUCTION === 'production' ? 'https://radi-and-svet.netlify.app' : 'http://localhost:3000';
+const baseURL = process.env.PRODUCTION === 'production' ? 'https://svatbasveiradi.com' : 'http://localhost:3000';
 
 export async function getGuestMatch(
     searchQuery: string,
