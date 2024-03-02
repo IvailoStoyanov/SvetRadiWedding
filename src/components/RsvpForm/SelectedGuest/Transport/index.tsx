@@ -43,7 +43,7 @@ const Transport = () => {
 
   return (
     <>
-      <p className={styles.transportTitle}>Желаете ли да се възползвате от организиран транспорт в посока София - Пасарел Лейк Клуб?</p>
+      <p className={styles.transportTitle}>Имате ли нужда от организиран транспорт?</p>
       <div className={styles.answersWrapper}>
         <div className={styles.transportAnswer}>
           <input

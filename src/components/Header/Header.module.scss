@@ -12,6 +12,7 @@
 .headerWrapper {
   background: #ffffff;
   transform: translateY(-67px);
+  overflow: hidden;
 
   @media (min-width:$media-s-tablet) {
     transform: none;

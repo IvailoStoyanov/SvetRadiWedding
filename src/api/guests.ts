@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import { RecordType } from "../Types/types";
 import axios from 'axios';
+import { statusHelper } from '../utils/statusHelper';
 
 export async function getGuestMatch(
     searchQuery: string,
@@ -13,8 +14,6 @@ export async function getGuestMatch(
         .then(response => {
             setIsFetching(false);
             setGuestsMatchContext(response.data);
-            console.log(response.data);
-
         })
         .catch(error => {
             console.error('There was a problem with the request:', error);
@@ -39,13 +38,20 @@ export async function getGroup(
 }
 
 export async function updateGuestGroup(updatedData: RecordType[]) {
-    
     const structuredData = {
-        "records": updatedData
+        "records": updatedData.map(guest => {
+            return {
+                ...guest,
+                fields: {
+                    ...guest.fields,
+                    status: statusHelper(guest.fields.status)
+                }
+            };
+        })
     }
-    
-    console.log(structuredData, 'needs to equal the postman body' );
-    
+
+    console.log(structuredData);
+
     try {
         const response = await axios.patch('http://localhost:3000/api/guests/update', structuredData, {
             headers: {

@@ -37,6 +37,9 @@ const Affirmation = () => {
     setGuestsGroupContext(modifiedGuests);
   }
 
+  console.log('Update?', guestsGroupContext);
+  
+
   return (
     <ul className={styles.list}>
       {guestsGroupContext.map((guest, i) => {
@@ -58,12 +61,12 @@ const Affirmation = () => {
             <div
               className={`${styles.answer} ${checkStatus(guest) && styles.active}`}
               onClick={() => handleStatusChange(guest.id, "Accepted")}>
-              Да, ще пия с вас!
+              Да, идвам!
             </div>
             <div
               className={`${styles.answer} ${!checkStatus(guest) && styles.active}`}
               onClick={() => handleStatusChange(guest.id, "Declined")}>
-              Не, ще пия в нас.
+              Не, няма да дойда.
             </div>
           </div>
         </li>

@@ -14,7 +14,6 @@
 
   p {
     margin: 0;
-    font-family: 'Cormorant Infant', serif;
     font-size: 23px;
   }
 
@@ -47,12 +46,11 @@
 
 .active {
   opacity: 1;
-  background: #2C4F32;
-  // color: white;
+  background: #298c53;
+  color: white;
   
   &:hover {
-    background: #2C4F32;
-    // color: white;
+    background: #298c53;
     opacity: 1;
   }
 }

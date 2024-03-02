@@ -16,7 +16,7 @@ const NamesList = () => {
     setGuestsGroupContext,
   } = context;
 
-  if (!guestsMatchContext) {
+  if (!guestsMatchContext.length) {
     return null;
   }
 
