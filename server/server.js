@@ -4,7 +4,6 @@ const cors = require('cors');
 const app = express();
 const guestRoutes = require('./routes/guests');
 
-// Remember to set production .env NODE_ENV and rename it inside netlify
 const corsOptions = {
     origin: process.env.NODE_ENV === "production" ? "svatbasveiradi.com" : "*",
     optionsSuccessStatus: 200

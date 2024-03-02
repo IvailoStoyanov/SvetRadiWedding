@@ -3,6 +3,8 @@ import { RecordType } from "../Types/types";
 import axios from 'axios';
 import { statusHelper } from '../utils/statusHelper';
 
+const baseURL = process.env.NODE_ENV === 'production' ? 'https://radi-and-svet.netlify.app' : 'http://localhost:3000';
+
 export async function getGuestMatch(
     searchQuery: string,
     setGuestsMatchContext: Dispatch<SetStateAction<RecordType[] | []>>,
@@ -10,7 +12,7 @@ export async function getGuestMatch(
 ) {
     setIsFetching(true);
 
-    await axios.get(`http://localhost:3000/api/guests/guest?searchQuery=${searchQuery}`)
+    await axios.get(`${baseURL}/api/guests/guest?searchQuery=${searchQuery}`)
         .then(response => {
             setIsFetching(false);
             setGuestsMatchContext(response.data);
@@ -24,7 +26,7 @@ export async function getGroup(
     searchQuery: string,
     setGuestsGroupContext: Dispatch<SetStateAction<RecordType[] | []>>
 ) {
-    await axios.get(`http://localhost:3000/api/guests/group?searchQuery=${searchQuery}`)
+    await axios.get(`${baseURL}/api/guests/group?searchQuery=${searchQuery}`)
         .then(response => {
             const modifiedRecords = response.data.map((guest: RecordType) => {
                 delete guest.createdTime;
@@ -51,7 +53,7 @@ export async function updateGuestGroup(updatedData: RecordType[]) {
     }
 
     try {
-        const response = await axios.patch('http://localhost:3000/api/guests/update', structuredData, {
+        const response = await axios.patch(`${baseURL}/api/guests/update`, structuredData, {
             headers: {
                 'Content-Type': 'application/json',
             },
