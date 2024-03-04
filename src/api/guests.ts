@@ -3,7 +3,7 @@ import { RecordType } from "../Types/types";
 import axios from 'axios';
 import { statusHelper } from '../utils/statusHelper';
 
-const baseURL = process.env.PRODUCTION === 'production' ? 'https://svatbasveiradi.com' : 'http://localhost:3000';
+const baseURL = window.location.origin;
 
 export async function getGuestMatch(
     searchQuery: string,
@@ -12,8 +12,8 @@ export async function getGuestMatch(
 ) {
     setIsFetching(true);
 
-    await axios.get(`${baseURL}/api/guests/guest?searchQuery=${searchQuery}`)
-        .then(response => {
+    await axios.get(`${baseURL}/api/guests?searchQuery=${searchQuery}`)
+        .then(response => {            
             setIsFetching(false);
             setGuestsMatchContext(response.data);
         })
@@ -26,7 +26,7 @@ export async function getGroup(
     searchQuery: string,
     setGuestsGroupContext: Dispatch<SetStateAction<RecordType[] | []>>
 ) {
-    await axios.get(`${baseURL}/api/guests/group?searchQuery=${searchQuery}`)
+    await axios.get(`${baseURL}/api/guests?searchQuery=${searchQuery}&target=group`)
         .then(response => {
             const modifiedRecords = response.data.map((guest: RecordType) => {
                 delete guest.createdTime;
@@ -53,11 +53,15 @@ export async function updateGuestGroup(updatedData: RecordType[]) {
     }
 
     try {
-        const response = await axios.patch(`${baseURL}/api/guests/update`, structuredData, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
+        const response = await axios.patch(
+            `${baseURL}/api/guests`,
+            structuredData,
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            }
+        );
 
         return response.data;
     } catch (error) {
