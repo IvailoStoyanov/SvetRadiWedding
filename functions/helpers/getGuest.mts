@@ -19,14 +19,26 @@ export default async (req) => {
                 'Content-Type': 'application/json'
             },
         }
-    );
-
-    return new Response(
-        JSON.stringify(response.data),
-        {
-            headers: {
-                'content-type': 'application/json'
+    ).then(record => {
+        // console.log('wow', record);
+        return new Response(
+            JSON.stringify(record.data),
+            {
+                headers: {
+                    'content-type': 'application/json'
+                }
             }
-        }
-    );
+        )
+        
+        // return new Response(
+        //     JSON.stringify(response.data),
+            // {
+            //     headers: {
+            //         'content-type': 'application/json'
+            //     }
+            // }
+        // );
+    });
+
+    
 }
