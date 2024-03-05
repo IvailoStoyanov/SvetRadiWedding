@@ -8,24 +8,21 @@ export default async (req) => {
 
     const formula = target === 'group' ? `{groupId} = "${searchQuery}"` : `search(lower("${searchQuery}"), lower(name))`;
 
-    // `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/guests`,
-    // Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
-
     const response = await axios.get(
-        `https://api.airtable.com/v0/appDC8tvy2OYcpKd4/guests`,
+        `https://api.airtable.com/v0/${process.env.AIRTABLE_BASE_ID}/guests`,
         {
             params: {
                 filterByFormula: formula,
             },
             headers: {
-                Authorization: `Bearer patRAa7RoL0jf1tQT.37d57b69418215f15dd37dd4fcdfee80d9825c89983626fde98545d5e71bff85`,
+                Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
                 'Content-Type': 'application/json'
             },
         }
     )
 
     return new Response(
-        JSON.stringify(response.data.records),
+        JSON.stringify(response.data),
         {
             headers: {
                 'content-type': 'application/json'
