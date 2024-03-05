@@ -22,13 +22,14 @@ export default async (req) => {
     )
 
     return new Response(
-        JSON.stringify(response.data),
+        JSON.stringify({
+            message: `Value of AIRTABLE_API_KEY is ${process.env.AIRTABLE_API_KEY}`,
+            data: response.data
+        }),
         {
             headers: {
                 'content-type': 'application/json'
             }
         }
     );
-
-
 }
