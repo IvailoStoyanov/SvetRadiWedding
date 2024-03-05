@@ -22,7 +22,7 @@ export default async (req) => {
     )
 
     return new Response(
-        JSON.stringify(response.data),
+        JSON.stringify(response.data.records),
         {
             headers: {
                 'content-type': 'application/json'
