@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import FoodAlergies from './FoodAlergies';
 import AccommodationChoice from './AccommodationChoice';
 import Transport from './Transport';

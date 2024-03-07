@@ -1,10 +1,7 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { GuestsContext } from '../../../../contexts/GuestsContext';
 import styles from './index.module.scss';
 import { RecordType } from '../../../../Types/types';
-import tick from '../../../../assets/tick.svg';
-import cross from '../../../../assets/cross.svg';
-
 
 const Affirmation = () => {
   const context = useContext(GuestsContext);
