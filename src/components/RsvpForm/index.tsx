@@ -18,6 +18,8 @@ const RsvpForm = () => {
     isFetching,
   } = context;
 
+
+  // TODO: remove form autofocus zoom because on next form name select it doesnt zoom out back
   return guestsGroupContext?.length ? <SelectedGuest /> : (
     <div className={styles.formWrapper}>
       <h2>Ще дойдете ли?</h2>

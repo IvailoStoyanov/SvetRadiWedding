@@ -14,7 +14,7 @@
 
   p {
     margin: 0;
-    font-size: 23px;
+    font-weight: bold;
   }
 
   img {
@@ -31,16 +31,19 @@
 }
 
 .answer {
-  opacity: 0.25;
   padding: 6px 15px 10px 15px;
   width: 50%;
   transition: 0.3s ease-in;
   text-align: center;
   cursor: pointer;
+  background: #f2f7f9;
+  
+  &:first-of-type {
+    margin-right: 10px;
+  }
 
   &:hover {
-    opacity: 0.7;
-    background: #edf2f4;
+    background: #dee1e3;
   }
 }
 

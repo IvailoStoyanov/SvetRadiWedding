@@ -35,8 +35,8 @@ const FoodAlergies = () => {
   }
 
   return (
-    <div>
-      <p className={styles.alergiesTitle}>Имате ли хранителни алергии или други диетични рестрикции?</p>
+    <div className={styles.wrapper}>
+      <p className={styles.alergiesTitle}>Имате ли хранителни алергии <br /> или други диетични рестрикции?</p>
       <div className={styles.answersWrapper}>
         <div className={styles.alergiesAnswer}>
           <input

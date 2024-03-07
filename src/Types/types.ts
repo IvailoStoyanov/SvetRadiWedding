@@ -9,6 +9,7 @@ export interface RecordType {
     createdTime?: string,
     fields: {
         alergies: string,
+        accommodation: string,
         groupId: string,
         groupName: string,
         menu: string,

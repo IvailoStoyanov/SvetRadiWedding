@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { GuestsContext } from '../../../../contexts/GuestsContext';
 import styles from './index.module.scss';
 import { RecordType } from '../../../../Types/types';
@@ -18,8 +18,11 @@ const Affirmation = () => {
     setGuestsGroupContext,
   } = context;
 
-  const checkStatus = (guest: RecordType) => {
-    if (guest.fields.status === 'Accepted') {
+
+  const isActive = (guest: RecordType, initiator: string) => {
+    const { status } = guest.fields;
+
+    if ((status === 'Accepted' || status === 'Declined') && status === initiator) {
       return true
     }
     return false;
@@ -39,35 +42,23 @@ const Affirmation = () => {
 
   return (
     <ul className={styles.list}>
-      {guestsGroupContext.map((guest, i) => {
-        return <li key={i}>
-          <div className={styles.name}>
-            {guestsGroupContext.length > 1 &&
-              <>
-                <p>
-                  {guest.fields.name}
-                </p>
-                <img
-                  src={checkStatus(guest) ? tick : cross}
-                  alt="Netlify Logo"
-                  className={styles.icon} />
-              </>
-            }
+      {guestsGroupContext.map((guest, i) => <li key={i}>
+        <div className={styles.name}>
+          {guestsGroupContext.length > 1 && <p>{guest.fields.name}</p>}
+        </div>
+        <div className={styles.yesNoWrapper}>
+          <div
+            className={`${styles.answer} ${isActive(guest, "Accepted") && styles.active}`}
+            onClick={() => handleStatusChange(guest.id, "Accepted")}>
+            Да, идвам!
           </div>
-          <div className={styles.yesNoWrapper}>
-            <div
-              className={`${styles.answer} ${checkStatus(guest) && styles.active}`}
-              onClick={() => handleStatusChange(guest.id, "Accepted")}>
-              Да, идвам!
-            </div>
-            <div
-              className={`${styles.answer} ${!checkStatus(guest) && styles.active}`}
-              onClick={() => handleStatusChange(guest.id, "Declined")}>
-              Не, няма да дойда.
-            </div>
+          <div
+            className={`${styles.answer} ${isActive(guest, "Declined") && styles.active}`}
+            onClick={() => handleStatusChange(guest.id, "Declined")}>
+            Не, няма да дойда.
           </div>
-        </li>
-      }
+        </div>
+      </li>
       )}
     </ul>
   )

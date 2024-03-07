@@ -35,9 +35,8 @@ const FoodMenu = () => {
 
   if (guestsGroupContext.length > 1) {
     return guestsGroupContext.map(({ id, fields }, index) => {
-      return fields.status === "Accepted" &&
-        <fieldset key={index} className={styles.fieldset}>
-          <legend className={styles.legend}>Меню за {fields.name}:</legend>
+      return fields.status === "Accepted" && <div className={styles.personalMenuWrapper}>
+          <p className={styles.legend}>Меню за {fields.name}</p>
           <div className={styles.optionsWrapper}>
             <div className={styles.inputWrapper}>
               <input
@@ -62,7 +61,7 @@ const FoodMenu = () => {
               <label htmlFor={`veggie${index}`}>Вегитарианско</label>
             </div>
           </div>
-        </fieldset>
+      </div>
     });
   }
 

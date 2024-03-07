@@ -23,12 +23,12 @@ const Timetable = () => {
           <p className={styles.time}>17:00</p>
           <p>Ритуал на плажа</p>
         </li>
-        <li>
+        <li className={styles.largeText}>
           <img src={cocktails} alt="коктейли" className={styles.icon} />
           <p className={styles.time}>17:30</p>
           <p>Коктейл и снимки с гостите</p>
         </li>
-        <li>
+        <li className={styles.largeText}>
           <img src={tent} alt="коктейли" className={styles.icon} />
           <p className={styles.time}>18:30</p>
           <p>Добре дошли в бара на къмпинга</p>

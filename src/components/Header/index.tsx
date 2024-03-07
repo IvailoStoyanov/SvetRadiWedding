@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 import inviteMobile from '../../assets/headers/headerMobile.svg';
-import inviteDesktop from '../../assets/headers/headerDesktop.svg';
+import inviteDesktop from '../../assets/headers/headerDesktop.png';
 import { useIsMobile } from '../../hooks/useIsMobile';
 
 export default function Header({ title }: { title: string }) {

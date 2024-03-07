@@ -43,7 +43,7 @@ const Transport = () => {
 
   return (
     <>
-      <p className={styles.transportTitle}>Имате ли нужда от организиран транспорт?</p>
+      <p className={styles.transportTitle}>Транспорт:</p>
       <div className={styles.answersWrapper}>
         <div className={styles.transportAnswer}>
           <input
@@ -54,7 +54,7 @@ const Transport = () => {
             onChange={() => handleTransportChange('да')}
             defaultChecked={wantsTransport}
           />
-          <label htmlFor="transportYes">Да</label>
+          <label htmlFor="transportYes">Имам нужда от организорам  транспорт</label>
         </div>
         <div className={styles.transportAnswer}>
           <input
@@ -65,7 +65,7 @@ const Transport = () => {
             defaultChecked={wantsTransport}
             onChange={() => handleTransportChange('не')}
           />
-          <label htmlFor="transportNo">Не</label>
+          <label htmlFor="transportNo">Ще дойда самостоятелно</label>
         </div>
       </div>
     </>

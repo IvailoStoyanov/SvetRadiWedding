@@ -1,5 +1,6 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import FoodAlergies from './FoodAlergies';
+import AccommodationChoice from './AccommodationChoice';
 import Transport from './Transport';
 import FoodMenu from './FoodMenu';
 import Affirmation from './Affirmation';
@@ -28,6 +29,12 @@ const SelectedGuest = () => {
     navigate('/formSuccess');
   }
 
+  const isValidSubmit = () => {
+    const inactiveGuestStatus = guestsGroupContext.find(guest => guest.fields.status === "Waiting for reply");
+
+    return !!inactiveGuestStatus
+  }
+
   return (
     <div className={styles.wrapper}>
       <h3 className={styles.heading}>
@@ -41,8 +48,9 @@ const SelectedGuest = () => {
       <Affirmation />
       <FoodMenu/>
       <FoodAlergies />
+      <AccommodationChoice />
       <Transport />
-      <button className={styles.button} onClick={handleSubmit}>Изпрати потвърждението</button>
+      <button className={styles.button} onClick={handleSubmit} disabled={isValidSubmit()}>Изпрати потвърждението</button>
     </div>
   )
 };

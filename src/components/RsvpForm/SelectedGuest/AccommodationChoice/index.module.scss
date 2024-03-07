@@ -1,10 +1,6 @@
 @import '/src/styles/variables.scss';
 
-.wrapper {
-  padding-bottom: 26px;
-}
-
-.alergiesTitle {
+.accommodationTitle {
   font-weight: bold;
   margin: 0 0 10px 0;
 }
@@ -17,13 +13,14 @@
   }
 }
 
-.alergiesAnswer {
+.accommodationAnswer {
   padding-right: 10px;
 }
 
-.alergiesTextFieldWrapper {
+.accommodationTextFieldWrapper {
   display: flex;
   flex-flow: column;
+  padding-top: 10px;
 
   textarea {
     margin-top: 10px;

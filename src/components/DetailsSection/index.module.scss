@@ -75,7 +75,7 @@
 
     p {
         text-align: center;
-        margin: 0;
+        margin: 16px 0 5px 0;
     }
 
 }
@@ -93,7 +93,7 @@
     ul {
         list-style-type: "- ";
         padding: 0;
-        margin: 0;
+        margin: 0 0 0 15px;
     }
     
     @media (min-width:$media-s-tablet) {
@@ -102,39 +102,18 @@
     }
     
     @media (min-width:$media-s-desktop) {
-        padding: 30px 50px 30px 50px;
+        padding: 30px 50px 50px 50px;
         max-width: calc(1000px - 100px);
     }
 }
 
 .locationAndTransportHeadline {
-    @media (min-width:$media-s-tablet) {
-        // padding-top: 50px;
-        padding-bottom: 20px;
-    }
+    padding-bottom: 16px;
 }
 
 .transportAndLocationContentWrapper {
     p {
         margin-top: 20px;
-    }
-
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 10px 0 0 0;
-    }
-
-    li {
-        margin-bottom: 10px;
-        display: flex;
-        justify-items: center;
-
-        &::before {
-            content: '・';
-            display: block;
-            margin-right: 4px;
-        }
     }
 
     @media (min-width:$media-s-tablet) {
@@ -162,8 +141,7 @@
         font-weight: bold;
     }
 
-    .details{
-        text-align: center;
-        padding: 10px 0;
+    p {
+        padding-top: 16px;
     }
 }

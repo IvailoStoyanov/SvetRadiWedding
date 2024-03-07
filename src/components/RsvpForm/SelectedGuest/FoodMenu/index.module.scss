@@ -6,15 +6,24 @@
   border: 2px solid;
 }
 
+.personalMenuWrapper {
+  padding-bottom: 26px;
+
+  p {
+    margin: 0 0 10px 0;
+  }
+}
+
 .legend {
   background: #ffffff;
+  font-weight: bold;
 }
 
 .optionsWrapper {
   display: flex;
-
+  
   @media (min-width:$media-s-tablet) {
-    justify-content: space-around;
+    justify-content: center;
   }
 }
 
