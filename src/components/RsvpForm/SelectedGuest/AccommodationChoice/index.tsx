@@ -64,7 +64,7 @@ const AccommodationChoice = () => {
       </div>
       {wantsAccommodation &&
         <div className={styles.accommodationTextFieldWrapper}>
-          <label htmlFor="story">Моля, напишете името на избраното от вас бунгало:</label>
+          <label htmlFor="story">Моля, напишете името на избраното от вас бунгало, дата за настаняване и дата за напускане:</label>
           <textarea
             name="story"
             required
