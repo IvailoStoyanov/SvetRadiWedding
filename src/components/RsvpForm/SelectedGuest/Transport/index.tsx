@@ -54,7 +54,7 @@ const Transport = () => {
             onChange={() => handleTransportChange('да')}
             defaultChecked={wantsTransport}
           />
-          <label htmlFor="transportYes">Имам нужда от организорам  транспорт</label>
+          <label htmlFor="transportYes">Желая организиран транспорт (транспортът ще ви доведе от Варна до къмпинга в 16:30 и ще ви върне във Варна в полунощ)</label>
         </div>
         <div className={styles.transportAnswer}>
           <input
