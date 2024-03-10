@@ -1,7 +1,7 @@
 import getGuest from "./helpers/getGuest.mts";
 import updateGuestGeoup from "./helpers/updateGuestGroup.mts";
 
-export default async (req: Request, context) => {
+export default async (req: Request) => {
     const { method } = req;
     switch (method) {
         case 'GET':

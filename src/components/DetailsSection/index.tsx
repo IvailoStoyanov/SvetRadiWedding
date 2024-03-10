@@ -1,8 +1,8 @@
 import styles from './index.module.scss';
 import krapetsImage from "../../assets/krapets-beatch.jpeg";
+import Accommodation from './Accommodation';
 
 const DetailsSection = () => {
-
   return (
     <div className={styles.detailsWrapper}>
       <div className={styles.dressCodeWrapper}>
@@ -21,16 +21,7 @@ const DetailsSection = () => {
           </a>
         </div>
       </div>
-
-      <div className={styles.accommodationWrapper}>
-        <h2>Настаняване</h2>
-        <div className={styles.detailItem}>
-          <p>
-            <b>поема се от гостите</b><br />
-            повече информация за условията на настаняване <a href='https://drive.google.com/file/d/1jXAOiNaRMfGS0RPelYOmtNFPRFKks1FK/view?usp=drivesdk'>прочетете тук</a>
-          </p>
-        </div>
-      </div>
+      <Accommodation />
     </div>
   );
 };

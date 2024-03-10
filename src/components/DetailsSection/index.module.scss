@@ -121,27 +121,3 @@
         min-width: 33%;
     }
 }
-
-.accommodationWrapper {
-    background: white;
-    padding: 30px 25px 30px 25px;
-    margin-top: 50px;
-
-    @media (min-width:$media-s-tablet) {
-        text-align: center;
-        padding: 50px 0;
-        margin: 60px auto;
-        max-width: 600px;
-    }
-    @media (min-width:$media-s-desktop) {
-        max-width: 1000px;
-    }
-
-    a {
-        font-weight: bold;
-    }
-
-    p {
-        padding-top: 16px;
-    }
-}

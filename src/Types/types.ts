@@ -4,6 +4,15 @@ export interface GuestProviderPropsType {
     children: ReactNode;
 }
 
+export interface AccommodationType {
+    id: string,
+    createdTime?: string,
+    fields: {
+        name: string,
+        status: string
+    }
+}
+
 export interface RecordType {
     id: string,
     createdTime?: string,
